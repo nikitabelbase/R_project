@@ -29,8 +29,8 @@ head(UKAccidents)
 
 #the highest and lowest number of accidents due to various type of weather condition
 #'fine no high winds' caused higher number of deaths while 'snowing + high winds' caused the lowest
-carriers <- group_by(UKAccidents, weather_conditions)
-summarise(carriers, n())
+freq <- group_by(UKAccidents, weather_conditions)
+summarise(freq, n())
 
 #bar graph is plotted with the help of ggplot
 plot <- ggplot(data.frame(UKAccidents),aes(x= weather_conditions, y= number_of_casualties))+ 
