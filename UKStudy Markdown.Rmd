@@ -3,6 +3,8 @@ title: "R Project Report"
 author: "Nikita Belbase"
 date: "4/28/2020"
 output: word_document
+bibliography: references.bib
+link-citations: yes
 ---
 ## Road Accidents Study in the UK
 
@@ -16,7 +18,7 @@ library(dplyr)
 ```
 
 ```{r, include=FALSE}
-UKAccidents <- read.csv("C:\\Users\\Shubham\\Desktop\\R project\\Kaagle_Upload.csv", header = TRUE)
+UKAccidents <- read.csv("UKAccidentData.csv", header = TRUE)
 
 UKAccidents <- subset(data.frame(UKAccidents), select = c("weather_conditions","number_of_casualties", "number_of_vehicles", "accident_severity"))
 ```
@@ -85,7 +87,7 @@ H1 (Alternative Hypothesis): Hazardous weather conditions do not contribute to a
 Road Accidents Incidence data was originated from <https://data.gov.uk/> and sourced from [Kaggle](https://www.kaggle.com/akshay4/road-accidents-incidence). The dataset in Kaggle was cleaned and merged therefore further flittering was not required. 
 
 ```{r, include = FALSE}
-UKAccidents <- read.csv("Kaagle_Upload.csv", header = TRUE)
+UKAccidents <- read.csv("UKAccidentData.csv", header = TRUE)
 ```
 
 ### Methodology 
@@ -178,3 +180,9 @@ This study's results have some implications for road safety and researchers. Whi
 
 ### Conclusion
 It can be concluded that adverse weather conditions are not responsible for an increase in accidents.
+
+### References
+@govuk2019
+@lawgroup2019
+@kaggle2017
+@statista2018

@@ -1,8 +1,9 @@
 library(ggplot2)
 library(dpylr)
+library(shiny)
 library(knitr)
 
-UKAccidents <- read.csv("Kaagle_Upload.csv", header = TRUE)
+UKAccidents <- read.csv("UKAccidentData.csv", header = TRUE)
 
 #subset function is used to keep only the necessary columns from the data frame
 UKAccidents <- subset(data.frame(UKAccidents), select = c("weather_conditions","number_of_casualties", "number_of_vehicles", "accident_severity"))
